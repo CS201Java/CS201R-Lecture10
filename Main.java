@@ -12,12 +12,15 @@ public class Main {
         //CREATE A PERSON OBJECT USING OVERLOADED CONSTRUCTOR
         Person p1 = new Person("Einstien","Albert", 144);
 
+        //CREATE A PERSON OBJECT USING DEFAULT CONSTRUCTOR
 
-        //PRINT OBJECT 
+
+
+        //PRINT OBJECTS 
          System.out.println(p1.printPerson());
 
         try {
-            //define file values
+            //CREATE AN ARRAYLIST OF PERSON OBJECTS
             ArrayList<Person> people = new ArrayList<>();
 
             File inFile = new File("people.txt");
@@ -28,6 +31,7 @@ public class Main {
                 System.out.println("Input is not valid");
             }
             
+            //CREATE A PRINTWRITER OBJECT & WRITE TO THE OUTPUT FILE
             for (Person p : people){
                 System.out.printf(p.printPerson());
             }
@@ -40,19 +44,15 @@ public class Main {
             return;
         }
 
-        /*
+        
         //CHECKING UNDERSTANDING
         Other f = new Other();
         System.out.println(f.i);   
         System.out.println(f.s);     
         f.imethod();
-        f.smethod();
-        F is not an object
-        System.out.println(F.i);  
-        System.out.println(F.s);
-        F.imethod();
-        F.smethod();
-        */ 
+        //f.smethod();
+        Other.smethod();
+        
     }
 
     public static int loadArrayList(ArrayList<Person> people, Scanner input){

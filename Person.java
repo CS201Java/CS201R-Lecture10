@@ -4,12 +4,15 @@ public class Person {
     private    String lname;
     private    int age;
 
+    //NOTE: no modifier indicates only classes in the same
+    //      package can instantiate the class
     Person(){
         this("","",0);  //uses the constructor that matches this list
         type = 'P';
         fname = "";
         lname = "";
         age = 0;
+        totalPeople++;
     }
     Person(String f, String l, int a){
         type = 'P';
